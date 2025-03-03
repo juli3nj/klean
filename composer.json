@@ -1,0 +1,113 @@
+{
+    "name": "roots/radicle",
+    "type": "project",
+    "license": "MIT",
+    "description": "Radicle is an opinionated starting point for WordPress projects with the Roots stack",
+    "homepage": "https://roots.io/radicle/",
+    "authors": [
+        {
+            "name": "Ben Word",
+            "email": "ben@benword.com",
+            "homepage": "https://github.com/retlehs"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*",
+                "wpackagist-theme/*"
+            ]
+        },
+        {
+          "type":"composer",
+          "url":"https://connect.advancedcustomfields.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        },
+        "files": [
+            "app/helpers.php"
+        ]
+    },
+    "require": {
+        "php": ">=8.2",
+        "blade-ui-kit/blade-heroicons": "^2.2",
+        "blade-ui-kit/blade-icons": "^1.5",
+        "composer/installers": "^2.2",
+        "guzzlehttp/guzzle": "^7.5",
+        "johnbillion/extended-cpts": "^5.0",
+        "log1x/acorn-disable-media-pages": "^1.0",
+        "masterminds/html5": "^2.8",
+        "oscarotero/env": "^2.1",
+        "roots/acorn": "^4.0",
+        "roots/acorn-prettify": "^1.0",
+        "roots/bedrock-autoloader": "^1.0",
+        "roots/bedrock-disallow-indexing": "^2.0",
+        "roots/wordpress": "6.6.1",
+        "roots/wp-config": "1.0.0",
+        "roots/wp-password-bcrypt": "1.1.0",
+        "roots/wp-stage-switcher": "^2.2",
+        "vlucas/phpdotenv": "^5.5",
+        "wpackagist-plugin/safe-svg": "^2.1",
+        "wpengine/advanced-custom-fields-pro": "^6.3"
+    },
+    "require-dev": {
+        "johnbillion/query-monitor": "^3.12",
+        "laravel/pint": "^1.4",
+        "pestphp/pest": "^2.0",
+        "phpcompatibility/php-compatibility": "^9.3",
+        "roave/security-advisories": "dev-latest",
+        "spatie/laravel-ignition": "^2.4"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "composer/installers": true,
+            "roots/wordpress-core-installer": true,
+            "pestphp/pest-plugin": true
+        },
+        "sort-packages": true,
+        "platform": {
+            "php": "8.2.18"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "acorn": {
+            "providers": [
+                "App\\Providers\\AssetsServiceProvider",
+                "App\\Providers\\BlocksServiceProvider",
+                "App\\Providers\\ThemeServiceProvider",
+                "App\\Providers\\PostTypesServiceProvider"
+            ]
+        },
+        "installer-paths": {
+            "public/content/mu-plugins/{$name}/": [
+                "type:wordpress-muplugin"
+            ],
+            "public/content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "public/content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        },
+        "wordpress-install-dir": "public/wp"
+    },
+    "scripts": {
+        "lint": "pint --test",
+        "lint:fix": "pint",
+        "test": "pest",
+        "post-autoload-dump": [
+            "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
+        ]
+    }
+}

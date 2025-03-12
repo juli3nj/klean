@@ -1,0 +1,940 @@
+r-p {
+    display: block;
+    direction: ltr;
+    font-size: 16px;
+    text-align: left;
+    line-height: normal;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+r-p *,
+r-p *:before,
+r-p *:after {
+    box-sizing: inherit;
+}
+
+r-p rp-h {
+    display: none;
+}
+
+r-p rp-s {
+    display: inline;
+}
+
+r-p rp-readmore {
+    display: block;
+    color: #136aaf;
+    font-size: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+r-p rp-slider {
+    display: flex;
+    display: -ms-flexbox;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    align-items: center;
+    -ms-flex-align: center;
+}
+
+r-p rp-star {
+    color: #fb8e28;
+}
+
+r-p rp-stars svg {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 4px 0 0;
+}
+
+/*-------------------------------- yelp stars --------------------------------*/
+r-p rp-stars[data-info*="yelp"] svg {
+    padding: 3px;
+    border-radius: 3px;
+}
+r-p rp-stars[data-info*="5,yelp"] svg {
+    background: #fb433c;
+}
+r-p rp-stars[data-info*="4,yelp"] svg {
+    background: #ff643d;
+}
+r-p rp-stars[data-info*="4.5,yelp"] svg:nth-child(5) {
+    background: linear-gradient(90deg, #ff643d 50%, #bbbac0 50%);
+}
+r-p rp-stars[data-info*="3,yelp"] svg,
+r-p rp-stars[data-info*="3.5,yelp"] svg {
+    background: #ff8742;
+}
+r-p rp-stars[data-info*="3.5,yelp"] svg:nth-child(5) {
+    background: #bbbac0;
+}
+r-p rp-stars[data-info*="3.5,yelp"] svg:nth-child(4) {
+    background: linear-gradient(90deg, #ff8742 50%, #bbbac0 50%);
+}
+r-p rp-stars[data-info*="4,yelp"] svg:nth-child(5),
+r-p rp-stars[data-info*="3,yelp"] svg:nth-child(5),
+r-p rp-stars[data-info*="3,yelp"] svg:nth-child(4),
+r-p rp-stars[data-info*="2,yelp"] svg,
+r-p rp-stars[data-info*="2.5,yelp"] svg,
+r-p rp-stars[data-info*="1,yelp"] svg,
+r-p rp-stars[data-info*="1.5,yelp"] svg {
+    background: #bbbac0;
+}
+r-p rp-stars[data-info*="2,yelp"] svg:nth-child(1),
+r-p rp-stars[data-info*="2,yelp"] svg:nth-child(2),
+r-p rp-stars[data-info*="2.5,yelp"] svg:nth-child(1),
+r-p rp-stars[data-info*="2.5,yelp"] svg:nth-child(2) {
+    background: #ffad48;
+}
+r-p rp-stars[data-info*="2.5,yelp"] svg:nth-child(3) {
+    background: linear-gradient(90deg, #ffad48 50%, #bbbac0 50%);
+}
+r-p rp-stars[data-info*="1,yelp"] svg:nth-child(1),
+r-p rp-stars[data-info*="1.5,yelp"] svg:nth-child(1) {
+    background: #ffcc4b;
+}
+r-p rp-stars[data-info*="1.5,yelp"] svg:nth-child(2) {
+    background: linear-gradient(90deg, #ffcc4b 50%, #bbbac0 50%);
+}
+
+/*-------------------------------- svg, dark --------------------------------*/
+r-p rp-logo svg {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-radius: 50%;
+}
+
+r-p rp-logo[data-provider="facebook"] svg {
+    padding: 2px;
+    background-color: #3c5b9b;
+}
+
+r-p [data-color="dark"] rp-review-time,
+r-p [data-color="dark"] rp-header rp-based {
+    color: #ccc;
+}
+
+r-p [data-color="dark"] {
+    color: #eee;
+}
+
+/*-------------------------------- common --------------------------------*/
+.rplg-pop {
+    top: 100% !important;
+    bottom: auto !important;
+    opacity: 0;
+    -webkit-transform: translate(0px, 0%);
+    -ms-transform: translate(0px, 0%);
+    transform: translate(0px, 0%);
+    -webkit-transition: opacity 300ms ease, -webkit-transform 300ms ease;
+    transition: opacity 300ms ease, -webkit-transform 300ms ease;
+    transition: transform 300ms ease, opacity 300ms ease;
+    transition: transform 300ms ease, opacity 300ms ease, -webkit-transform 300ms ease;
+}
+
+.rplg-pop-up {
+    opacity: 1;
+    -webkit-transform: translate(0px, -100%);
+    -ms-transform: translate(0px, -100%);
+    transform: translate(0px, -100%);
+    text-align: left;
+}
+
+.rplg-pop-down {
+    opacity: .5;
+    -webkit-transition: opacity 150ms ease;
+    transition: opacity 150ms ease;
+    transition: opacity 150ms ease;
+    transition: opacity 150ms ease;
+}
+
+.rplg-clickable {
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+}
+
+.rplg-clickable:hover {
+    box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 3px 5px rgba(0, 0, 0, .24);
+}
+
+.rplg-clickable:active {
+    box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 0px 1px rgba(0, 0, 0, .24);
+}
+
+rp-b {
+    display: block;
+    font-weight: bold;
+}
+
+.rplg-scroll::-webkit-scrollbar {
+    width: 4px;
+}
+
+.rplg-scroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.rplg-scroll::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #ccc;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+.rplg-scroll::-webkit-scrollbar-thumb:window-inactive {
+    background: #ccc;
+}
+
+rp-flex {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    position: relative
+}
+
+rp-flex.rplg-center {
+    align-items: center;
+}
+
+rp-flex.rplg-column {
+    text-align: left;
+    flex-direction: column;
+}
+
+/*-------------------------------- tag theme --------------------------------*/
+/*TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO !!! RENAME SIMPLE CLASSES !!! TODO TODO TODO TODO TODO TODO TODO TODO*/
+r-p rp-tag {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 16px;
+    max-width: none;
+    z-index: 2147482999;
+}
+
+r-p rp-tag.right {
+    left: auto;
+    right: 16px;
+}
+
+r-p rp-tag.embed {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    z-index: auto;
+}
+
+r-p rp-tag-inner {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    outline-width: 0;
+    overflow: visible;
+    padding: 8px 16px;
+    cursor: pointer;
+    color: #333;
+    font-weight: 400;
+    line-height: 18px;
+    border: none;
+    border-radius: 32px;
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    user-select: none;
+    transition: all .2s ease-in-out;
+}
+
+r-p rp-tag.push rp-tag-inner:hover {
+    transform: translate(0px, -2px)!important;
+}
+
+r-p rp-tag rp-logo {
+    display: flex;
+    margin: 0 0 0 4px;
+}
+
+r-p rp-tag rp-logo:first-child {
+    margin: 0;
+}
+
+r-p rp-tag rp-logo svg {
+    width: 18px;
+    height: 18px;
+}
+
+r-p rp-tag rp-star {
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 6px;
+}
+
+r-p rp-tag rp-stars {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+r-p rp-tag.expand rp-stars {
+    width: 0;
+}
+
+r-p rp-tag.expand:hover rp-stars {
+    width: 115px;
+}
+
+r-p rp-tag rp-stars svg {
+    margin: 0;
+    padding: 2px 3px;
+    width: 23px;
+    height: 23px;
+    vertical-align: middle;
+}
+
+r-p rp-tag-inner.rplg-tag-review rp-stars[data-reviewus] {
+    display: none;
+}
+r-p rp-tag-inner.rplg-tag-review rp-stars-wrap:hover rp-stars {
+    display: none;
+}
+r-p rp-tag-inner.rplg-tag-review rp-stars-wrap:hover rp-stars[data-reviewus] {
+    display: block;
+}
+r-p rp-tag-inner.rplg-tag-review rp-stars[data-reviewus] svg:hover ~ svg use {
+    fill: #ccc;
+}
+
+r-p rp-tag rp-rating {
+    color: #fb8e28;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    margin: 0 0 0 3px;
+}
+
+r-p rp-tag-text {
+    color: #333;
+    font-size: 16px;
+    margin: 0 0 0 12px;
+    line-height: 1.7em;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+/*-------------------------------- sidebar --------------------------------*/
+r-p rp-sb {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 368px;
+    z-index: 2147483000
+}
+
+r-p rp-sb.rplg-left {
+    left: 0;
+}
+
+@media(max-width: 460px) {
+    r-p rp-sb {
+        width:100%
+    }
+}
+
+/*.rplg-form .rplg-form-close {
+    padding: 0;
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    background: 0 0;
+    min-height: 0;
+    width: auto;
+    float: right;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: .6;
+    color: #999;
+    -webkit-appearance: none
+}
+
+.rplg-form .rplg-form-close:hover {
+    color: #555
+}*/
+
+r-p rp-sbb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(250,250,251,.98);
+    border-left: 1px solid #dadee2;
+    box-shadow: 0 0 4px 1px rgba(0,0,0,.08);
+    z-index: 2147483000
+}
+
+r-p rp-sbc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 20px 0;
+    overflow-y: auto;
+    z-index: 2147483001;
+    -webkit-transform: translateZ(0)
+}
+
+r-p rp-sbci {
+    position: relative;
+    min-height: 100%;
+    margin: 0 auto;
+}
+
+r-p rp-sbx {
+    display: block;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 26px;
+    color: #333;
+    cursor: pointer;
+    line-height: 22px;
+    padding: 0px 5px;
+    z-index: 2147483001;
+    background: #fff;
+    border-radius: 50%;
+    user-select: none;
+    box-shadow: 0 0 2px rgb(0 0 0 / 12%), 0 3px 5px rgb(0 0 0 / 24%);
+    transition: all .2s ease-in-out;
+}
+
+r-p rp-sbx:hover {
+    background: #f5f5f5;
+}
+
+r-p rp-sbx:active {
+    box-shadow: none;
+}
+
+/*-------------------------------- slider cols --------------------------------*/
+r-p rp-slider.rp-col-xs {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+r-p rp-slider.rp-col-xs rp-header,
+r-p rp-slider.rp-col-xs rp-content,
+r-p rp-slider.rp-col-xs rp-review,
+r-p rp-slider.rp-col-x rp-header + rp-content rp-review {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+r-p rp-slider.rp-col-xl rp-header + rp-content {
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+}
+
+r-p rp-slider.rp-col-l rp-header + rp-content {
+    -ms-flex: 0 0 80%;
+    flex: 0 0 80%;
+    max-width: 80%;
+}
+
+r-p rp-slider.rp-col-m rp-header + rp-content {
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+r-p rp-slider.rp-col-s rp-header + rp-content {
+    -ms-flex: 0 0 66.666666%;
+    flex: 0 0 66.666666%;
+    max-width: 66.666666%;
+}
+
+r-p rp-slider.rp-col-x rp-header,
+r-p rp-slider.rp-col-x rp-header + rp-content,
+r-p rp-slider.rp-col-x rp-review,
+r-p rp-slider.rp-col-s rp-header + rp-content rp-review {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+r-p rp-slider.rp-col-s rp-header,
+r-p rp-slider.rp-col-s rp-review,
+r-p rp-slider.rp-col-m rp-header + rp-content rp-review {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+r-p rp-slider.rp-col-m rp-header,
+r-p rp-slider.rp-col-m rp-review,
+r-p rp-slider.rp-col-l rp-review {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+r-p rp-slider.rp-col-l rp-header,
+r-p rp-slider.rp-col-xl rp-review {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+r-p rp-slider.rp-col-xl rp-header {
+    -ms-flex: 0 0 16.666666%;
+    flex: 0 0 16.666666%;
+    max-width: 16.666666%;
+}
+
+r-p rp-slider[data-col="1"] rp-review {
+    --col: 1;
+}
+r-p rp-slider[data-col="2"] rp-review {
+    --col: 2;
+}
+r-p rp-slider[data-col="3"] rp-review {
+    --col: 3;
+}
+r-p rp-slider[data-col="4"] rp-review {
+    --col: 4;
+}
+r-p rp-slider[data-col="5"] rp-review {
+    --col: 5;
+}
+r-p rp-slider[data-col="6"] rp-review {
+    --col: 6;
+}
+r-p rp-slider[data-col="7"] rp-review {
+    --col: 7;
+}
+r-p rp-slider[data-col="8"] rp-review {
+    --col: 8;
+}
+r-p rp-slider[data-col="9"] rp-review {
+    --col: 9;
+}
+r-p rp-slider[data-col="10"] rp-review {
+    --col: 10;
+}
+r-p rp-slider[data-col] rp-review {
+    -ms-flex: 0 0 calc(100% / var(--col))!important;
+    flex: 0 0 calc(100% / var(--col))!important;
+    max-width: calc(100% / var(--col))!important;
+}
+
+/*-------------------------------- slider header --------------------------------*/
+r-p rp-slider rp-header img.rplg-img {
+    margin: 0;
+    margin-right: 15px;
+}
+
+r-p rp-slider rp-header rp-stars {
+    font-size: 1em;
+}
+
+r-p rp-slider rp-header {
+    margin: 0 0 10px;
+    text-align: center;
+    line-height: normal;
+}
+
+r-p rp-slider rp-header rp-score {
+    display: block;
+    color: #fb8e28;
+}
+
+r-p rp-slider rp-header rp-rating {
+    font-size: 1.6em;
+    font-weight: 600;
+    margin: 0 10px 0 0;
+    vertical-align: middle;
+}
+
+r-p rp-slider rp-header rp-stars {
+    letter-spacing: 2px;
+    vertical-align: middle;
+}
+
+r-p rp-slider rp-header rp-stars svg {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+}
+
+r-p rp-slider rp-header rp-star {
+    position: relative;
+    display: inline-block;
+}
+
+r-p rp-slider rp-header rp-scale {
+    display: block;
+    font-size: 1.425em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+r-p rp-slider rp-header rp-name {
+    display: block;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+r-p rp-slider rp-header rp-based {
+    display: block;
+    color: #555;
+    font-size: 1em;
+    margin-top: 2px;
+}
+
+r-p rp-slider rp-header rp-based svg {
+    display: inline;
+    vertical-align: middle;
+    margin: -2px 4px 0;
+}
+
+r-p rp-stars .rp-sh:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '\2605';
+    color: #fb8e28;
+    width: 13px;
+    overflow: hidden;
+}
+
+/*-------------------------------- slider review us --------------------------------*/
+r-p rp-slider rp-review_us {
+    display: inline-block;
+    color: #fff;
+    font-size: 15px;
+    margin: 15px 10px 0 0;
+    padding: 4px 10px 6px;
+    outline: none ;
+    border-radius: 27px;
+    background: #0a6cff;
+    white-space: nowrap;
+    user-select: none;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #888;
+    vertical-align: middle;
+}
+
+r-p rp-slider rp-review_us a {
+    color: #fff!important;
+    text-decoration: none;
+}
+
+r-p rp-slider rp-review_us:hover {
+    color: #fff;
+    background: #1f67e7;
+}
+
+r-p rp-slider rp-review_us:active {
+    color: #fff;
+    background: #0a6cff;
+}
+
+r-p rp-slider rp-review_us svg {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    padding: 1px;
+    background: #fff;
+    margin: 0 0 0 4px;
+    border-radius: 50%;
+    vertical-align: bottom;
+}
+
+r-p rp-slider rp-review_us span[data-logo="facebook"] svg {
+    background: #3c5b9b;
+}
+
+/*-------------------------------- slider content --------------------------------*/
+r-p rp-slider rp-content {
+    position: relative;
+    min-width: 0;
+}
+
+r-p img.rplg-img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    margin: 0 15px 10px 0;
+    border: none;
+    border-radius: 50%;
+    min-width: initial;
+    max-width: initial;
+    object-fit: cover;
+    object-position: top;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+}
+
+r-p rp-review-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    white-space: nowrap;
+    width: 1px;
+    line-height: normal;
+}
+
+r-p rp-review-name,
+r-p rp-review-name a {
+    color: #154fc1;
+    font-weight: bold;
+    font-size: 1em;
+    overflow: hidden;
+    padding-right: 15px;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+
+r-p rp-review-name a {
+    color: inherit;
+}
+
+r-p rp-review-time {
+    color: #555;
+    font-size: .875em;
+    white-space: nowrap;
+}
+
+r-p rp-review rp-stars {
+    display: block;
+    color: #fb8e28;
+    font-size: 26px;
+    line-height: normal;
+    margin: 0 0 4px;
+    letter-spacing: 2px;
+}
+
+r-p rp-slider rp-header-inner,
+r-p rp-review-inner {
+    display: block;
+    position: relative;
+    margin: 0 10px;
+    padding: 15px;
+}
+
+r-p rp-review-inner {
+    border-radius: 5px;
+    border-color: transparent;
+    box-shadow: 0 1px 2px rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+}
+
+r-p rp-slider rp-reviews {
+    display: flex;
+    display: -ms-flexbox;
+    overflow: hidden;
+    overflow-x: scroll;
+    margin: 0 20px;
+    padding: 10px 0 15px;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+r-p rp-slider rp-reviews::-webkit-scrollbar {
+    display: none;
+}
+
+r-p rp-slider rp-review {
+    display: block;
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+}
+
+r-p rp-review rp-logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+r-p rp-slider[data-rs="2"] rp-review-inner:before {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 35px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #ccc;
+    border-color: inherit;
+    border-top: none;
+    border-left: none;
+    background-color: inherit;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+r-p rp-slider[data-rs="2"] rp-stars {
+    margin-top: 0;
+}
+
+r-p rp-slider[data-rs="2"] rp-review rp-flex {
+    padding: 20px 0 0 28px;
+}
+
+/*-------------------------------- slider text --------------------------------*/
+r-p rp-slider rp-review-text {
+    display: block;
+    height: auto;
+    font-size: 1.0625em;
+    line-height: 1.4em;
+    overflow-y: auto;
+    flex: 3;
+}
+
+rp-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+rp-slider rp-body {
+    height: 160px;
+}
+
+rp-media {
+    display: block;
+    margin: 10px 0 0 0;
+    flex: 1;
+}
+
+rp-thumb {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 4px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+rp-reply {
+    display: block;
+    color: #555;
+    font-size: .9em;
+    line-height: 1.35em;
+    margin: 10px 0 0 6px;
+    padding: 0 0 0px 6px;
+    overflow-y: auto;
+    border-left: 1px solid #999;
+    max-height: 4.05em;
+}
+
+rp-media + rp-reply {
+    max-height: 2.7em;
+}
+
+/*-------------------------------- slider controls --------------------------------*/
+r-p rp-slider rp-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+r-p rp-slider rp-btn-prev,
+r-p rp-slider rp-btn-next {
+    position: absolute;
+    height: 33px;
+    width: 33px;
+    opacity: .8;
+    text-align: center;
+    cursor: pointer;
+
+    border-radius: 50%;
+    user-select: none;
+    transition: all .2s ease-in-out;
+}
+
+r-p rp-slider rp-btn-prev svg path,
+r-p rp-slider rp-btn-next svg path {
+    fill: #999;
+}
+
+r-p rp-slider rp-btn-prev:hover,
+r-p rp-slider rp-btn-next:hover {
+    opacity: 1;
+}
+
+r-p rp-slider rp-btn-prev {
+    left: 0px;
+    /*margin-left: -3px;*/
+}
+
+r-p rp-slider rp-btn-next {
+    right: 0px;
+    /*margin-right: -3px;*/
+}
+
+/*-------------------------------- slider dots --------------------------------*/
+r-p rp-dots {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px 0 0;
+}
+
+r-p rp-dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin: 3px;
+    background: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: .4;
+    transition: all .2s ease-in-out;
+}
+
+r-p rp-dot:hover {
+    opacity: 1;
+}
+
+r-p rp-dot.active {
+    opacity: 1;
+    background: #154fc1;
+}

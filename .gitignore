@@ -1,5 +1,6 @@
 # Application
 public/content/plugins/*
+!public/content/plugins/business-reviews-bundle/
 !public/content/plugins/.gitkeep
 public/content/mu-plugins/*/
 !public/content/mu-plugins/editor/

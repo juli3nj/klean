@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0.1\n"
+
+msgid "%s Rating"
+msgstr "%s-Beoordeling"
+
+msgid "See all reviews"
+msgstr "Bekijk alle recensies"
+
+msgid "Google User"
+msgstr "Google gebruiker"
+
+msgid "read more"
+msgstr "lees meer"
+
+msgid "Next Reviews"
+msgstr "Volgende Recensies"
+
+msgid "Write a review"
+msgstr "Recensie schrijven"
+
+msgid "Based on %s reviews"
+msgstr "Gebaseerd op %s recensies"
+
+msgid "Based on %s reviews from"
+msgstr "Gebaseerd op %s recensies van"
+
+msgid "review us on"
+msgstr "beoordeel ons op"
+
+msgid "just left us a %s star review"
+msgstr "schreef een %s sterren review"
+
+msgid "on"
+msgstr "op"
+
+msgid "Excellent"
+msgstr "Uitstekend"
+
+msgid "Great"
+msgstr "Geweldig"
+
+msgid "Good"
+msgstr "Goed"
+
+msgid "Fair"
+msgstr "Redelijk"
+
+msgid "Poor"
+msgstr "Slecht"

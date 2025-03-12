@@ -1,3 +1,71 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@import 'contact.css';
+
+:root{
+  @apply leading-relaxed tracking-wide;
+
+  .customGradient{
+    @apply bg-gradient-to-r bg-secondary-600 from-secondary-800 to-transparent transition duration-300;
+  }
+
+  .customGradientAlt{
+    @apply bg-gradient-to-r bg-secondary-800 from-secondary-600 to-transparent transition duration-300;
+  }
+
+  .buttonGradient{
+    @apply bg-gradient-to-r bg-secondary-600 from-secondary-800 to-transparent transition duration-300;
+
+    &:hover{
+      @apply bg-gradient-to-r bg-secondary-300 from-secondary-800 to-transparent;
+    }
+  }
+
+  .shadowLogo{
+    border-radius: 10px;
+     box-shadow: 0 5px 15px 0 rgb(0 0 0 / 70%);
+  }
+
+  .contentText{
+    p{
+      @apply my-4
+    }
+
+    li{
+      @apply list-disc list-outside ml-8;
+    }
+  }
+
+  body{
+    @apply bg-primary-1000 text-white font-raleway px-0;
+
+    .lb-number{
+      @apply !hidden;
+    }
+
+    .lightboxOverlay{
+      @apply opacity-95;
+    }
+
+    .lb-image{
+      @apply border-0;
+    }
+  }
+
+  r-p{
+    rp-slider{
+      @apply flex flex-col ;
+
+      rp-header{
+        @apply w-full max-w-full my-8;
+
+        rp-name{
+          @apply mb-4;
+        }
+      }
+    }
+  }
+
+}

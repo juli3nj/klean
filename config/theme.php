@@ -17,7 +17,7 @@ return [
      * @link https://developer.wordpress.org/reference/functions/add_image_size/
      */
     'image_sizes' => [
-        // 'hd' => [1600, 900, true],
+         'square' => [350, 350, ['center', 'center']],
     ],
 
     /**
@@ -85,6 +85,8 @@ return [
          * @link https://developer.wordpress.org/themes/advanced-topics/customizer-api/#theme-support-in-sidebars
          */
         'customize-selective-refresh-widgets',
+
+	    'custom-logo',
     ],
 
     /**

@@ -5,8 +5,8 @@ import type { Bud } from "@roots/bud";
  */
 export default async (bud: Bud) => {
   bud
-    .proxy(`http://radicle.test`)
-    .serve(`http://localhost:4000`)
+    .proxy(`https://klean.test`)
+    .serve(`https://localhost:4000`)
     .watch([bud.path(`resources/views`), bud.path(`app`)])
 
     .entry(`app`, [`@scripts/app`, `@styles/app`])

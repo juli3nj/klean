@@ -36,7 +36,12 @@
     "typescript": "5.5.4"
   },
   "dependencies": {
+    "@lottiefiles/dotlottie-web": "^0.41.0",
     "@roots/wordpress-hmr": "6.23.3",
-    "alpinejs": "3.14.1"
+    "alpinejs": "3.14.1",
+    "aos": "^3.0.0-beta.6",
+    "lightbox2": "^2.11.5",
+    "simple-parallax-js": "^6.0.1",
+    "swiper": "^11.2.5"
   }
 }

@@ -1,0 +1,99 @@
+.wpcf7
+{
+  .form_contact
+  {
+    @apply grid grid-cols-2 auto-rows-auto gap-5 max-w-[1000px] mx-auto mt-12;
+
+    label
+    {
+      @apply flex flex-col;
+    }
+
+    input, textarea
+    {
+      @apply w-full py-1.5 px-5 border-0 bg-white outline-0 mt-2;
+    }
+
+    input:not([type='submit']), textarea
+    {
+      box-shadow: 8px 4px 25px 0 rgb(237 114 24 / 10%), 0 0 25px 0 rgb(237 114 24 / 20%), 0 0 25px 0 rgb(237 114 24 / 30%);
+    }
+
+    textarea
+    {
+      @apply h-36
+    }
+
+    label:nth-child(1)
+    {
+      @apply col-start-1 col-end-3 sm:col-start-1 sm:col-end-2
+    }
+
+    label:nth-child(2)
+    {
+      @apply col-start-1 col-end-3 sm:col-start-2 sm:col-end-3
+    }
+
+    label:nth-child(3)
+    {
+      @apply col-start-1 col-end-3 sm:col-start-1 sm:col-end-2
+    }
+
+    label:nth-child(4)
+    {
+      @apply col-start-1 col-end-3 sm:col-start-2 sm:col-end-3
+    }
+
+    label:nth-child(5)
+    {
+      @apply col-start-1 col-end-3
+    }
+
+    label:nth-child(6)
+    {
+      @apply col-start-1 col-end-3
+    }
+
+    label:nth-child(7)
+    {
+      @apply col-start-1 col-end-3
+    }
+
+    & > div
+    {
+      @apply col-start-1 col-end-3;
+
+      p
+      {
+        @apply tracking-tighter text-xs mb-4;
+      }
+
+      input[type='submit']
+      {
+        @apply block w-max mx-auto mt-0 mr-0 ml-auto py-3 px-6 text-lg font-medium bg-gradient-to-r bg-secondary-600 from-secondary-800 to-transparent transition duration-300 cursor-pointer;
+
+        &:hover
+        {
+          @apply bg-gradient-to-r bg-secondary-300 from-secondary-800 to-transparent;
+        }
+      }
+    }
+
+    .contactFooter{
+      @apply flex flex-col justify-between items-center mt-8 gap-8 md:flex-row;
+
+      .wpcf7-spinner{
+        @apply hidden;
+      }
+
+      p{
+        @apply mb-0;
+      }
+    }
+
+    label
+    {
+      @apply w-full
+    }
+  }
+}

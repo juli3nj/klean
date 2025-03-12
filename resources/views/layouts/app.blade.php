@@ -6,20 +6,17 @@
         @php(do_action('get_header'))
         @php(wp_head())
         @include('utils.styles')
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
 
     <body @php(body_class())>
         @php(wp_body_open())
 
         <div id="app">
-            <a class="sr-only focus:not-sr-only" href="#main">
-                {{ __('Skip to content', 'radicle') }}
-            </a>
-
-            @include('sections.header')
-
-            <main id="main" class="max-w-5xl mx-auto">
-                <div class="{{ $containerInnerClasses }}">
+            <main id="main" class="overflow-x-hidden">
+                <div class="">
                     @yield('content')
                 </div>
             </main>
@@ -27,6 +24,7 @@
             @include('sections.footer')
         </div>
 
+        @include('partials.phone')
         @php(do_action('get_footer'))
         @php(wp_footer())
         @include('utils.scripts')

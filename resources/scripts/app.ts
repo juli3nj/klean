@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   AOS.init();
 
 
-  const swiper = new Swiper('.swiperGallery', {
+  new Swiper('.swiperGallery', {
     loop: false,
     slidesPerView: 1.2,
     spaceBetween: 10,
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  const dotLottie = new DotLottie({
+  new DotLottie({
     autoplay: true,
     loop: true,
     canvas: document.querySelector('#lottiePhone'),

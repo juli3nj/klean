@@ -89,6 +89,8 @@ export default async (bud: Bud) => {
           `@roots/sage/stylelint-config`,
           `@roots/bud-tailwindcss/stylelint-config`,
         ])
+        .setRules({'no-duplicate-selectors': null})
+        // .setRules({'@typescript-eslint/no-unused-vars': null})
         .setFix(true)
         .setFailOnWarning(bud.isProduction)
     )

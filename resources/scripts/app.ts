@@ -12,6 +12,9 @@ import 'lightbox2/dist/css/lightbox.css';
 Object.assign(window, {Alpine: alpine}).Alpine.start();
 
 document.addEventListener('DOMContentLoaded', () => {
+
+
+
   AOS.init();
 
 

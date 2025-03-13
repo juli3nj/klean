@@ -22,7 +22,7 @@
       </ul>
       <div class="flex flex-col lg:flex-row mt-8 text-sm">
         <span class="">{{the_date('Y')}} &copy; droits réservés Klean Peinture</span>
-        <span class="hidden"> - </span>
+        <span class="hidden lg:block"> - </span>
         <span class="">Site réalisé par <a class="hover:text-secondary-800" href="https://https://www.manaraw.fr/" target="_blank">Manaraw Studio</a></span>
       </div>
     </div>

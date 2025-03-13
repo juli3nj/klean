@@ -11,7 +11,12 @@ export default async (bud: Bud) => {
 
     .entry(`app`, [`@scripts/app`, `@styles/app`])
     .entry(`editor`, [`@scripts/editor`, `@styles/editor`])
-    .copyDir(`images`)
+    .assets([
+      {
+        from: bud.path("@src/images"),
+        to: bud.path("@dist/dist/images/@file"),
+      },
+    ])
     .hash(bud.isProduction)
 
 

@@ -17,7 +17,8 @@ export default async (bud: Bud) => {
         to: bud.path("@dist/dist/images/@file"),
       },
     ])
-      
+    .hash(false)
+
     .setPublicPath(`/dist/`)
     .experiments(`topLevelAwait`, true)
 

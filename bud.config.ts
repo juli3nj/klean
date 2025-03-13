@@ -12,6 +12,8 @@ export default async (bud: Bud) => {
     .entry(`app`, [`@scripts/app`, `@styles/app`])
     .entry(`editor`, [`@scripts/editor`, `@styles/editor`])
     .copyDir(`images`)
+    .hash(bud.isProduction)
+
 
     .setPublicPath(`/dist/`)
     .experiments(`topLevelAwait`, true)

@@ -11,14 +11,13 @@ export default async (bud: Bud) => {
 
     .entry(`app`, [`@scripts/app`, `@styles/app`])
     .entry(`editor`, [`@scripts/editor`, `@styles/editor`])
-    .hash(!bud.isDevelopment)
-
-    // .assets([
-    //   {
-    //     from: bud.path("@src/images"),
-    //     to: bud.path("@dist/dist/images/@file"),
-    //   },
-    // ])
+    .assets([
+      {
+        from: bud.path("@src/images"),
+        to: bud.path("@dist/dist/images/@file"),
+      },
+    ])
+      
     .setPublicPath(`/dist/`)
     .experiments(`topLevelAwait`, true)
 

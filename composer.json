@@ -56,6 +56,7 @@
         "roots/wp-stage-switcher": "^2.2",
         "vlucas/phpdotenv": "^5.5",
         "wpackagist-plugin/contact-form-7": "^6.0",
+        "wpackagist-plugin/loco-translate": "^2.7",
         "wpackagist-plugin/safe-svg": "^2.1",
         "wpengine/advanced-custom-fields-pro": "^6.3"
     },

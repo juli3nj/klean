@@ -6,12 +6,14 @@
       </h2>
     @endif
     @if($description)
-      <div class="contentText text-center mx-auto">
+      <div class="contentText  text-center mx-auto">
         {!! $description !!}
       </div>
     @endif
     @if($shortcode)
-      {!! do_shortcode($shortcode) !!}
+
+        {!! do_shortcode($shortcode) !!}
+
     @endif
   </div>
 </section>

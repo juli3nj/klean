@@ -28,6 +28,10 @@
      box-shadow: 0 5px 15px 0 rgb(0 0 0 / 70%);
   }
 
+  input:not([type="submit"]), textarea{
+    @apply text-primary-1000;
+  }
+
   .contentText{
     p{
       @apply my-4

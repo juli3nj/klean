@@ -15,9 +15,9 @@
         <li class="flex items-center">
           Suivez notre actualité sur
           <x-socials linkClass="pl-4 text-primary-1000 hover-[&_*]:text-secondary-800"
-              containerClass="flex flex-row gap-3 justify-center items-center"
+              containerClass="flex flex-row justify-center items-center"
               :useBlade="true"
-              :icons="['facebook','linkedin', 'tiktok', 'instagram', 'youtube']" />
+              :icons="['instagram', 'facebook','linkedin', 'tiktok', 'youtube']" />
         </li>
       </ul>
       <div class="flex flex-col lg:flex-row mt-8 text-sm">

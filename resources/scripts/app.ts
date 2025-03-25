@@ -57,6 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const imageLeft = document.getElementsByClassName('parallaxTriangleLeft');
   new SimpleParallax(imageLeft, {
   });
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
+      });
+    });
+  });
+
 
 });
 

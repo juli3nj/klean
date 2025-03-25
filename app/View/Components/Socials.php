@@ -82,6 +82,7 @@ class Socials extends Component
 
             $this->setSocialIcons();
         }
+
     }
 
     public function setSocialIcons(): void

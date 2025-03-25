@@ -12,8 +12,12 @@
 </div>
 <div
     :class="{ 'right-0': open, '-right-[280px]': !open }"
-    class="fixed right-0 bottom-20 h-[150px] w-[280px] pl-8 flex justify-center flex-col bg-primary-1000 z-50 transition-all shadow-xl" id="phoneModal">
+    class="fixed right-0 bottom-20 h-[220px] w-[280px] pl-8 flex justify-center flex-col bg-primary-1000 z-50 transition-all shadow-xl" id="phoneModal">
   <span>Nous contacter<br>par téléphone</span>
   <a href="tel:{{ getInternationalPhone() }}" class="block text-xl font-medium mt-4 text-secondary-600">{{getPhone()}}</a>
+  @if(get_field('fax', 'option'))
+  ou
+  <a href="tel:{{ getInternationalPhone('fax') }}" class="block text-xl font-medium text-secondary-600">{{getPhone('fax')}}</a>
+  @endif
 </div>
 </div>

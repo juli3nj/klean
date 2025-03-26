@@ -1,4 +1,4 @@
-<div class="customGradientAlt relative overflow-x-hidden">
+<div class="customGradientAlt relative overflow-hidden">
   <img src="{{asset('images/sep-bottom.png')}}" class="rotate-180 max-h-[95px] w-full absolute top-[-1px] left-0 z-0" alt="">
   <div data-aos="fade-up" class="py-24 px-4 mx-auto max-w-[1920px] md:py-36">
     @if($title)

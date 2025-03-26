@@ -15,7 +15,7 @@
         @php(wp_body_open())
 
         <div id="app">
-            <main id="main" class="overflow-x-hidden">
+            <main id="main" class="overflow-hidden">
                 <div class="">
                     @yield('content')
                 </div>

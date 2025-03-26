@@ -1,7 +1,7 @@
 import alpine from 'alpinejs';
 import Swiper from 'swiper';
 import 'lightbox2';
-// import SimpleParallax from "simple-parallax-js/vanilla";
+import SimpleParallax from "simple-parallax-js/vanilla";
 import { DotLottie } from '@lottiefiles/dotlottie-web';
 import AOS from 'aos';
 
@@ -50,22 +50,22 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // const image = document.getElementsByClassName('parallaxTriangle');
-  // new SimpleParallax(image, {
-  // });
-  //
-  // const imageLeft = document.getElementsByClassName('parallaxTriangleLeft');
-  // new SimpleParallax(imageLeft, {
-  // });
-  // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  //   anchor.addEventListener('click', function (e) {
-  //     e.preventDefault();
-  //
-  //     document.querySelector(this.getAttribute('href')).scrollIntoView({
-  //       behavior: 'smooth',
-  //     });
-  //   });
-  // });
+  const image = document.getElementsByClassName('parallaxTriangle');
+  new SimpleParallax(image, {
+  });
+
+  const imageLeft = document.getElementsByClassName('parallaxTriangleLeft');
+  new SimpleParallax(imageLeft, {
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
+      });
+    });
+  });
 
 
 });
